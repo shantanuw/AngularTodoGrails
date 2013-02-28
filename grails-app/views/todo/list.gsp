@@ -32,5 +32,12 @@
 	</tbody>
 </table>
 <div class="well" style="text-align: center;" ng-show="more">
-	<a ng-click="showMore()">More</a>
+	<a ng-click="showMore()" id="showMoreBtn">More</a>
 </div>
+<script type="text/javascript">  
+$(window).scroll(function(){  
+	if  ($(window).scrollTop() == $(document).height() - $(window).height()){
+		$("#showMoreBtn").click();
+	}  
+});   
+</script>
