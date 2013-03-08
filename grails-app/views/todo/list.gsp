@@ -24,10 +24,11 @@
 		</th>
 	</thead>
 	<tbody>
-		<tr ng-repeat="todo in todos">
+		<tr ng-repeat="todo in todos" id="item_{{todo.id}}">
 			<td>{{todo.text}}</td>
 			<td>{{todo.priority}}</td>
 			<td>{{todo.dueDate | date:'mediumDate' }}</td>
+			<td><a ng-click="delete()"><i class="icon-remove"></i></a></td>
 		</tr>
 	</tbody>
 </table>

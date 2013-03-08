@@ -49,4 +49,11 @@ var ListCtrl = function($scope, $location, Todo) {
 	$scope.sortOrder = 'asc';
 
 	$scope.reset();
+	
+	$scope.delete = function () {
+	    var todo = this.todo.id;
+	    //Todo.delete({ id: itemId }, function () {
+	        $("#item_" + todo).fadeOut();
+	    //});
+	};
 }
